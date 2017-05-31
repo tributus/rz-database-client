@@ -1,0 +1,28 @@
+{
+  "name": "rz-database-client",
+  "version": "0.1.0",
+  "description": "database clients for RuteZangada",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tributus/rz-database-client.git"
+  },
+  "keywords": [
+    "database",
+    "postgresql",
+    "mysql",
+    "mongodb"
+  ],
+  "author": "Anderson Norberto Santos <anderson.norberto@gmail.com> (https://github.com/tributus)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tributus/rz-database-client/issues"
+  },
+  "homepage": "https://github.com/tributus/rz-database-client#readme",
+  "dependencies": {
+    "pg": "^6.2.3"
+  }
+}
