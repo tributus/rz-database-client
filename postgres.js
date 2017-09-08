@@ -30,7 +30,7 @@ module.exports = {
         });
 
         var resolveQuery = function (queryString,callback) {
-          displayLog("resolving query for ", queryString);
+          //displayLog("resolving query for ", queryString);
           if(queryString.substring(0,3)=="fs:"){
             readFile(path.join(baseQueryDir,queryString.substring(3)),callback);
           }
@@ -40,7 +40,7 @@ module.exports = {
         };
 
         var readFile = function (file,callback) {
-          displayLog("retrieving query content for ", file);
+          //displayLog("retrieving query content for ", file);
           if (sqlCache[file]) {
             callback(sqlCache[file]);
           } else {
@@ -79,7 +79,7 @@ module.exports = {
                   error_callback({ error: "DATABASE_CONNECTION_ERROR" }, err);
                 }
                 else {
-                  var query = client.query(queryText, params);
+                  var query = client.query(new pg.Query(queryText, params));
                   query.on('row', function (row) {
                     results.push(row);
                   });
@@ -109,7 +109,7 @@ module.exports = {
                   error_callback({ error: "DATABASE_CONNECTION_ERROR" }, err);
                 }
                 else {
-                  var query = client.query(queryText, params);
+                  var query = client.query(new pg.Query(queryText, params));
                   query.on('row', function (row) {
                     result = row;
                   });
@@ -138,7 +138,7 @@ module.exports = {
                   error_callback({ error: "DATABASE_CONNECTION_ERROR" }, err);
                 }
                 else {
-                  var query = client.query(queryText, params);
+                  var query = client.query(new pg.Query(queryText, params));
                   query.on('end', function (result) {
                     done();
                     success_callback(result.rowCount);
