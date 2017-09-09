@@ -1,6 +1,6 @@
 {
   "name": "rz-database-client",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "database clients for RuteZangada",
   "main": "index.js",
   "scripts": {
