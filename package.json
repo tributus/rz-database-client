@@ -24,5 +24,10 @@
   "homepage": "https://github.com/tributus/rz-database-client#readme",
   "dependencies": {
     "pg": "^6.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   }
 }
