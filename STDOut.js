@@ -24,6 +24,9 @@ module.exports = {
 
     const printErrObject = (err) => {
       console.log(getColor('red'), `\nmessage:\n${err.message}\n\nstack trace:\n${err.stack}\n`); // eslint-disable-line no-console
+      Object.keys(err).forEach((key) => {
+        console.log(getColor('red'), `\n${key}:\n${err[key]}`); // eslint-disable-line no-console
+      });
     };
 
     const printObjects = (list) => {
