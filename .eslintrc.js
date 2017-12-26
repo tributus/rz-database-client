@@ -8,5 +8,6 @@ module.exports = {
         "max-len":"off",
         "no-param-reassign":"off",
         "object-shorthand":"off",
+        "consistent-return":"off",
     }
 };
